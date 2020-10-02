@@ -1,0 +1,61 @@
+.header
+  position: relative
+  z-index: 1
+  padding: 30px
+  display: flex
+  flex-direction: row
+  // max-width: 1180
+
+  .mahadao-logo
+
+    @media (min-width: 400px)
+      flex: 1
+      height: 54.4px
+
+    @media (max-width: 400px)
+      text-align: center
+
+      img
+        margin-top: 10px
+        max-width: 100%
+
+  .two_buttons
+    float: right
+
+  button
+    font-family: $font-family-heading
+    border: 0
+    outline: none
+
+  .button1
+    width: 184px
+    height: 47px
+    font-size: 18px
+    border-radius: 45px
+    background-color: #333333
+    color: #ffffff
+    border: 0
+
+    &:hover
+      background-color: #444
+
+  .two_buttons
+    display: flex
+    flex-direction: row
+
+    li
+      // display: inline-block
+      margin: 0 10px 10px
+      list-style: none
+
+  .button2
+    width: 47px
+    height: 47px
+    font-family: $font-family-heading
+    font-style: normal
+    font-weight: bold
+    font-size: 20px
+    margin-left: 10px
+    border-radius: 45px
+    color: #ffffff
+    background: linear-gradient(#f47f57, #fd5656)

@@ -1,0 +1,129 @@
+#section-token-logos
+  $token-width: 450px
+  $token-inner-width: 196px
+
+  max-width: $max-width
+  margin: 100px auto
+  padding: 0 60px
+
+  @media screen and (max-width: 500px)
+    padding: 0 30px
+
+  .row
+    margin-bottom: 50px
+
+  .pitch
+    // margin-left: 124px
+    // margin-top: 238px
+    // width: 493px
+    font-family: $font-family-heading
+    color: #ffffff
+    font-size: 30px
+    font-weight: 800
+    line-height: 1.2
+
+  .side-text
+    color: #ababab
+    font-size: 16px
+    font-weight: 400
+    margin-top: 30px
+
+  .side-para
+    display: flex
+    flex-direction: column
+    justify-content: center
+    margin: 50px 0
+
+    .para-text
+      max-width: 600px
+
+  // .fig-rightpara
+    // display: flex
+    // justify-content: center
+
+  // .coin-arth
+  .coin-maha
+    .icon-section
+      text-align: right
+
+  .toppara-leftfig
+    position: relative
+    margin-top: 120px
+    width: 562px
+    height: 562px
+
+  .bottompara-rightfig
+    margin-top: 120px
+    width: 562px
+    height: 562px
+
+  // .rightpara-leftfig-img
+  //   margin: 182px 184px 184px 184.42px
+  //   width: 539px
+  //   height: 512px
+
+  .token
+    text-align: center
+
+  .icon-section
+    position: relative
+    display: inline-block
+    width: $token-width
+    height: $token-width
+
+    .rightpara-leftfig-img
+      width: $token-width
+      height: $token-width
+
+    .rightpara-leftfig-img-inner
+      position: absolute
+      width: $token-inner-width
+      height: $token-inner-width
+      top: ($token-width  - $token-inner-width) / 2
+
+      &.arth
+        left: ($token-width  - $token-inner-width) / 2
+
+      &.maha
+        right: ($token-width  - $token-inner-width) / 2
+
+    @media screen and (max-width: 500px)
+      $token-width: 300px
+      $token-inner-width: 100px
+
+      width: $token-width
+      height: $token-width
+
+      .rightpara-leftfig-img
+        width: $token-width
+        height: $token-width
+
+      .rightpara-leftfig-img-inner
+        width: $token-inner-width
+        height: $token-inner-width
+        top: ($token-width  - $token-inner-width) / 2
+
+        &.arth
+          left: ($token-width  - $token-inner-width) / 2
+
+        &.maha
+          right: ($token-width  - $token-inner-width) / 2
+
+    .token-title
+      font-family: $font-family-heading
+      color: #ffffff
+      font-size: 30px
+      font-weight: bold
+      text-align: center
+      margin-top: -80px
+      letter-spacing: 6px
+
+  .right-side-title
+    color: #ffffff
+    font-size: 36px
+    font-weight: 800
+    line-height: 1.2
+
+  .leftpara-rightfig
+    display: flex
+    justify-content: center
