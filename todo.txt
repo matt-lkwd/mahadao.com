@@ -1,0 +1,7 @@
+increase the size of the logo with font size 24px
+animation speed on all pages
+gradients to smoothen out the charka from the bottom
+animation has to stop on scroll already once
+text needs gradients
+footer icons hover state same as join discord button
+https://any.paris/ 0 for the hamburger menu
