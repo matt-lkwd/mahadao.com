@@ -32,49 +32,129 @@
     </li>
   </ul>
 
-  <div class="mobile-container d-block d-md-none">
-    <div id="myLinks">
-     <ul class="two_buttons">
-    <li>
+
+<nav>
+ 
+    <div class="openMenu d-block d-md-none" style=" font-size: 25px;
+   color:#fff;font-weight:500px;
+    cursor: pointer;" onclick="myFunction()"><i class="fa fa-bars"></i>
+      <ul class="mainMenu" id="h-menu" > 
+              <li>
       <a
         target="_blank"
         href="/ARTH Whitepaper - 1.1.0 Draft.pdf"
         class=""
         id="whitepaper-main"
       >
-        <button class="button1">
+    
           White Paper
-        </button>
+
       </a>
     </li>
+    <hr>
     <li>
       <a target="_blank" href="https://discord.gg/V6sr3fe" class="" id="discord-main">
-        <button class="button2">
-          <i class="fab fa-discord"></i>
-        </button>
+       Join Discord
       </a>
-    </li>
+    </li><hr>
     <li>
       <a target="_blank" href="https://t.me/mahadao" class="" id="telegram-main">
-        <button class="button2">
-          <i class="fab fa-telegram-plane"></i>
-        </button>
+       Join Telegram
       </a>
     </li>
-  </ul>
-  </div>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-      <i class="fa fa-bars" style="color: #fff;"></i>
-    </a>
-  </div>
+       <div class="closeMenu"><i class="fa fa-times"></i></div>
+               </ul>
+    </div>
+    </nav>
+
+<script>
+const mainMenu = document.querySelector('.mainMenu');
+ const closeMenu = document.querySelector('.closeMenu');
+ const openMenu = document.querySelector('.openMenu');
+
+ openMenu.addEventListener('click',show);
+ closeMenu.addEventListener('click',close);
+
+ function show(){
+   //  mainMenu.style.display = 'flex';
+     mainMenu.style.top = '0';
+ }
+ function close(){
+     mainMenu.style.top = '-100%';
+ }
+
+ function myFunction() {
+  var x = document.getElementById("h-menu");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+ </script>
 </header>
- <script>
-      function myFunction() {
-        var x = document.getElementById("myLinks");
-        if (x.style.display === "block") {
-          x.style.display = "none";
-        } else {
-          x.style.display = "block";
-        }
+
+<style>
+  @media(max-width: 768px){
+
+    nav{ 
+         background: #000;
+    }
+
+    nav .mainMenu {
+       /* height: 100vh;*/
+        position: fixed;
+        margin-top: 100px;
+        margin-bottom: 20px;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        list-style: none;
+        text-decoration: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #000;
+        transition: top 1s ease;
+        display: none;
+    }
+    nav .mainMenu {
+        display: block;
+        position: absolute;
+        top: 20px;
+
+    }
+
+    nav a{
+      text-decoration: none;
+     color: #fff;
+       margin-left: 20px;
+       font-weight: 400;
+    }
+
+ nav .closeMenu {
+        display: none;
+        position: absolute;
+    }
+
+    ul {
+        display: block;
+    }
+    nav .openMenu {
+        display: block;
+    }
+   
+    .icons i {
+        display: inline-block;
+        padding: 12px;
+    }
+
+     a:hover {
+         font-weight: 600;
+         text-decoration: none;
+         color: red;
       }
-      </script>
+
+}
+</style>
