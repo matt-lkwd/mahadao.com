@@ -17,58 +17,78 @@
       </a>
     </li>
     <li>
-      <a target="_blank" href="https://discord.gg/V6sr3fe" class="d-none d-md-block" id="discord-main">
+      <a
+        target="_blank"
+        href="https://discord.gg/V6sr3fe"
+        class="d-none d-md-block"
+        id="discord-main"
+      >
         <button class="button2">
           <i class="fab fa-discord"></i>
         </button>
       </a>
     </li>
     <li>
-      <a target="_blank" href="https://t.me/mahadao" class="d-none d-md-block" id="telegram-main">
+      <a
+        target="_blank"
+        href="https://t.me/mahadao"
+        class="d-none d-md-block"
+        id="telegram-main"
+      >
         <button class="button2">
           <i class="fab fa-telegram-plane"></i>
         </button>
       </a>
     </li>
   </ul>
-
-
-<nav>
- 
-    <div class="openMenu d-block d-md-none" style=" font-size: 25px;
+  <nav>
+    <div
+      class="openMenu d-block d-md-none"
+      style="font-size: 25px;
    color:#fff;font-weight:500px;
-    cursor: pointer;" onclick="myFunction()"><i class="fa fa-bars"></i>
-      <ul class="mainMenu" id="h-menu" > 
-              <li>
-      <a
-        target="_blank"
-        href="/ARTH Whitepaper - 1.1.0 Draft.pdf"
-        class=""
-        id="whitepaper-main"
-      >
-    
-          White Paper
-
-      </a>
-    </li>
-    <hr>
-    <li>
-      <a target="_blank" href="https://discord.gg/V6sr3fe" class="" id="discord-main">
-       Join Discord
-      </a>
-    </li><hr>
-    <li>
-      <a target="_blank" href="https://t.me/mahadao" class="" id="telegram-main">
-       Join Telegram
-      </a>
-    </li>
-       <div class="closeMenu"><i class="fa fa-times"></i></div>
-               </ul>
+    cursor: pointer;"
+      onclick="myFunction()"
+    >
+      <i class="fa fa-bars"></i>
+      <ul class="mainMenu" id="h-menu">
+        <li>
+          <a
+            target="_blank"
+            href="/ARTH Whitepaper - 1.1.0 Draft.pdf"
+            class=""
+            id="whitepaper-main"
+          >
+            White Paper
+          </a>
+        </li>
+        <li>
+          <a
+            target="_blank"
+            href="https://discord.gg/V6sr3fe"
+            class=""
+            id="discord-main"
+          >
+            Join Discord
+          </a>
+        </li>
+        <li>
+          <a
+            target="_blank"
+            href="https://t.me/mahadao"
+            class=""
+            id="telegram-main"
+          >
+            Join Telegram
+          </a>
+        </li>
+        <div class="closeMenu">
+          <i class="fa fa-times"></i>
+        </div>
+      </ul>
     </div>
-    </nav>
-
-<script>
-const mainMenu = document.querySelector('.mainMenu');
+  </nav>
+  <script>
+    const mainMenu = document.querySelector('.mainMenu');
  const closeMenu = document.querySelector('.closeMenu');
  const openMenu = document.querySelector('.openMenu');
 
@@ -81,7 +101,10 @@ const mainMenu = document.querySelector('.mainMenu');
  }
  function close(){
      mainMenu.style.top = '-100%';
+     mainMenu.style.display = "none";
  }
+
+ close();
 
  function myFunction() {
   var x = document.getElementById("h-menu");
@@ -91,27 +114,26 @@ const mainMenu = document.querySelector('.mainMenu');
     x.style.display = "block";
   }
 }
-
- </script>
+  </script>
 </header>
-
 <style>
   @media(max-width: 768px){
 
-    nav{ 
+    nav{
          background: #000;
     }
 
     nav .mainMenu {
        /* height: 100vh;*/
         position: fixed;
-        margin-top: 100px;
+        padding-top: 100px;
         margin-bottom: 20px;
         right: 0;
         left: 0;
-        z-index: 10;
+        z-index: -1;
         list-style: none;
         text-decoration: none;
+        font-size: 16px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -123,7 +145,14 @@ const mainMenu = document.querySelector('.mainMenu');
         display: block;
         position: absolute;
         top: 20px;
+    }
 
+    nav .mainMenu li {
+      padding: 15px 0;
+    }
+
+    nav .mainMenu li:nth-child(2n) {
+      background-color: #111;
     }
 
     nav a{
@@ -144,7 +173,7 @@ const mainMenu = document.querySelector('.mainMenu');
     nav .openMenu {
         display: block;
     }
-   
+
     .icons i {
         display: inline-block;
         padding: 12px;
