@@ -35,8 +35,8 @@
 
 <nav>
  
-    <div class="openMenu d-block d-md-none" style=" font-size: 2rem;
-   color:#fff;
+    <div class="openMenu d-block d-md-none" style=" font-size: 25px;
+   color:#fff;font-weight:500px;
     cursor: pointer;" onclick="myFunction()"><i class="fa fa-bars"></i>
       <ul class="mainMenu" id="h-menu" > 
               <li>
@@ -46,23 +46,20 @@
         class=""
         id="whitepaper-main"
       >
-        <button class="button1">
+    
           White Paper
-        </button>
+
       </a>
     </li>
+    <hr>
     <li>
       <a target="_blank" href="https://discord.gg/V6sr3fe" class="" id="discord-main">
-        <button class="button2">
-          <i class="fab fa-discord"></i>
-        </button>
+       Join Discord
       </a>
-    </li>
+    </li><hr>
     <li>
       <a target="_blank" href="https://t.me/mahadao" class="" id="telegram-main">
-        <button class="button2">
-          <i class="fab fa-telegram-plane"></i>
-        </button>
+       Join Telegram
       </a>
     </li>
        <div class="closeMenu"><i class="fa fa-times"></i></div>
@@ -100,18 +97,25 @@ const mainMenu = document.querySelector('.mainMenu');
 
 <style>
   @media(max-width: 768px){
+
+    nav{ 
+         background: #000;
+    }
+
     nav .mainMenu {
        /* height: 100vh;*/
         position: fixed;
-        margin-top: 70px;
+        margin-top: 100px;
+        margin-bottom: 20px;
         right: 0;
         left: 0;
         z-index: 10;
-        text-align: center;
+        list-style: none;
+        text-decoration: none;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        /*background: #000;*/
+        background: #000;
         transition: top 1s ease;
         display: none;
     }
@@ -119,8 +123,14 @@ const mainMenu = document.querySelector('.mainMenu');
         display: block;
         position: absolute;
         top: 20px;
-        right: 20px;
 
+    }
+
+    nav a{
+      text-decoration: none;
+     color: #fff;
+       margin-left: 20px;
+       font-weight: 400;
     }
 
  nav .closeMenu {
@@ -139,6 +149,12 @@ const mainMenu = document.querySelector('.mainMenu');
         display: inline-block;
         padding: 12px;
     }
+
+     a:hover {
+         font-weight: 600;
+         text-decoration: none;
+         color: red;
+      }
 
 }
 </style>
