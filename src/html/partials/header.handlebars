@@ -24,7 +24,7 @@
         id="discord-main"
       >
         <button class="button2">
-          <i class="fab fa-discord"></i>
+          <i class="fab fa-discord" style=" margin-right: 3px;"></i>
         </button>
       </a>
     </li>
@@ -55,27 +55,27 @@
           <a
             target="_blank"
             href="/ARTH Whitepaper - 1.1.0 Draft.pdf"
-            class=""
+            class="menulist"
             id="whitepaper-main"
           >
             White Paper
           </a>
-        </li>
+        </li><hr>
         <li>
           <a
             target="_blank"
             href="https://discord.gg/V6sr3fe"
-            class=""
+            class="menulist"
             id="discord-main"
           >
             Join Discord
           </a>
-        </li>
+        </li><hr>
         <li>
           <a
             target="_blank"
             href="https://t.me/mahadao"
-            class=""
+            class="menulist"
             id="telegram-main"
           >
             Join Telegram
@@ -117,6 +117,12 @@
   </script>
 </header>
 <style>
+
+.fab{
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
   @media(max-width: 768px){
 
     nav{
@@ -147,12 +153,13 @@
         top: 0px;
         margin-top: -50px;
         right: 20px;
+    }
 
     nav .mainMenu li:nth-child(2n) {
       background-color: #111;
     }
 
-    nav a{
+    .menulist {
       text-decoration: none;
       color: #fff;
       margin-left: 20px;
