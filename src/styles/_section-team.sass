@@ -1,5 +1,4 @@
 #team-section.section-f
- 
   max-width: 100%
   margin: 60px auto 0
   border-radius: 55px
@@ -8,7 +7,6 @@
   padding: 30px 0
 
   .f-text-title
-
     font-family: $font-family-heading
     font-style: normal
     font-weight: bold
@@ -81,3 +79,86 @@
   .card1
     text-align: center
     width: 25%
+
+.f-cards
+  display: flex
+  flex-wrap: wrap
+
+.flip-card
+  background-color: transparent
+  width: 230px
+  height: 290px
+  perspective: 1000px
+  margin: 40px 40px 0px 80px
+
+.flip-card-inner
+  position: relative
+  width: 100%
+  height: 100%
+  text-align: center
+  transition: transform 0.6s
+  transform-style: preserve-3d
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+  border-radius: 30px
+
+.flip-card:hover .flip-card-inner
+  transform: rotateY(180deg)
+
+.card1, .after_hover_div
+  position: absolute
+  width: 100%
+  height: 100%
+  -webkit-backface-visibility: hidden
+  backface-visibility: hidden
+
+.f-card-body
+
+.f-card-img-top
+  width: 214.53px
+  height: 214.53px
+  border-radius: 50%
+  border: 2px
+  background: linear-gradient(45deg, #000000 14.64%, #515151 85.36%)
+  margin-left: px
+  margin-top: 20px
+
+.f-card-title
+  font-size: 24px
+  font-style: normal
+  font-weight: 700
+  line-height: 29px
+  letter-spacing: 0px
+  text-align: center
+  color: #ffffff
+
+.f-card-title-hover
+  font-size: 24px
+  font-weight: 400
+  line-height: 0px
+  letter-spacing: 0px
+  text-align: center
+  color: #F47F57
+  margin: 10px auto
+
+.f-card-text
+  font-family: Syne
+  font-size: 14px
+  font-weight: 400
+  line-height: 17px
+  letter-spacing: 0px
+  text-align: center
+  color: rgba(161, 161, 161, 1)
+
+.after_hover_div
+  background-color: #111010
+  transform: rotateY(180deg)
+  border-radius: 30px
+
+.social-links
+  display: flex
+  flex-wrap: wrap
+  padding: 25px 20px 5px 20px
+
+.fa
+  color: #ffffff
+  margin: 30px 30px 10px 40px

@@ -94,10 +94,13 @@
 
  openMenu.addEventListener('click',show);
  closeMenu.addEventListener('click',close);
+  mainMenu.addEventListener('scroll',close);
+
 
  function show(){
    //  mainMenu.style.display = 'flex';
      mainMenu.style.top = '0';
+     openMenu.style.display = none;
  }
  function close(){
      mainMenu.style.top = '-100%';
@@ -148,10 +151,10 @@
         display: none;
     }
     nav .mainMenu .closeMenu {
-        display: none;
+        display: block;
         position: absolute;
         top: 0px;
-        margin-top: -50px;
+       /* margin-top: -50px;*/
         right: 20px;
     }
 
@@ -169,6 +172,7 @@
 
     ul {
         display: block;
+        margin-bottom: 20px;
     }
     nav .openMenu {
         display: block;
@@ -184,6 +188,10 @@
          text-decoration: none;
          color: red;
       }
+
+.openMenu::after{
+  display: none;
+}
 
 }
 </style>
