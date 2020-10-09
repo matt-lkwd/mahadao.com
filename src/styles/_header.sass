@@ -19,7 +19,6 @@
         margin-top: 10px
         max-width: 100%
 
-
   .two_buttons
     float: right
 
@@ -35,15 +34,15 @@
     border-radius: 45px
     background-color: #333333
     color: #ffffff
-    border: 1px solid #f95921; 
+    border: 1px solid #f95921
     @media (max-width:600px)
-      text-align:center
+      text-align: center
 
   .button1:hover
-      background: linear-gradient(#f47f57, #fd5656)
+    background: linear-gradient(#f47f57, #fd5656)
 
-  #two_buttons  
-    margin:auto     
+  #two_buttons
+    margin: auto
 
     &:hover
       background-color: #444
@@ -68,3 +67,53 @@
     border-radius: 45px
     color: #ffffff
     background: linear-gradient(#f47f57, #fd5656)
+
+  @media (max-width: 768px)
+    nav
+      background: #000
+
+      .mainMenu
+        /* height: 100vh;
+        position: fixed
+        padding-top: 100px
+        margin-bottom: 20px
+        right: 0
+        left: 0
+        z-index: -1
+        list-style: none
+        text-decoration: none
+        font-size: 16px
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        background: #000
+        transition: top 1s ease
+        display: none
+
+        .closeMenu
+          display: none
+          position: absolute
+          top: 0px
+          margin-top: -50px
+          right: 20px
+
+        li:nth-child(2n)
+          background-color: #111
+
+    .menulist
+      text-decoration: none
+      color: #fff
+      margin-left: 20px
+      font-weight: 400
+
+    ul, nav .openMenu
+      display: block
+
+    .icons i
+      display: inline-block
+      padding: 12px
+
+    a:hover
+      font-weight: 600
+      text-decoration: none
+      color: red
