@@ -1,6 +1,6 @@
 {{! Header }}
 <header class="nav-row header">
-  <div class="mahadao-logo" data-aos="fade-up" data-aos-duration="2000" data-aos-once="true"> 
+  <div class="mahadao-logo" data-aos="fade-up" data-aos-duration="2000" data-aos-once="true">
     <img src="../../images/mainlogo.svg" alt="mahadao-logo" />
   </div>
   <ul class="two_buttons">
@@ -92,12 +92,70 @@
     const closeMenu = document.querySelector('.closeMenu');
     const openMenu = document.querySelector('.openMenu');
 
-    openMenu.addEventListener('click',show);
-    closeMenu.addEventListener('click',close);
+ openMenu.addEventListener('click',show);
+ closeMenu.addEventListener('click',close);
+  mainMenu.addEventListener('scroll',close);
 
-    function show(){
-      //  mainMenu.style.display = 'flex';
-        mainMenu.style.top = '0';
+
+ function show(){
+   //  mainMenu.style.display = 'flex';
+     mainMenu.style.top = '0';
+     openMenu.style.display = none;
+ }
+ function close(){
+     mainMenu.style.top = '-100%';
+     mainMenu.style.display = "none";
+ }
+
+ close();
+
+ function myFunction() {
+  var x = document.getElementById("h-menu");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+  </script>
+</header>
+<style>
+
+.fab{
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+  @media(max-width: 768px){
+
+    nav{
+         background: #000;
+    }
+
+    nav .mainMenu {
+       /* height: 100vh;*/
+        position: fixed;
+        padding-top: 100px;
+        margin-bottom: 20px;
+        right: 0;
+        left: 0;
+        z-index: -1;
+        list-style: none;
+        text-decoration: none;
+        font-size: 16px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #000;
+        transition: top 1s ease;
+        display: none;
+    }
+    nav .mainMenu .closeMenu {
+        display: block;
+        position: absolute;
+        top: 0px;
+       /* margin-top: -50px;*/
+        right: 20px;
     }
     function close(){
         mainMenu.style.top = '-100%';
@@ -106,10 +164,28 @@
 
     close();
 
-    function myFunction() {
-      var x = document.getElementById("h-menu");
-      if (x.style.display === "block") x.style.display = "none";
-      else x.style.display = "block";
+    ul {
+        display: block;
+        margin-bottom: 20px;
     }
-  </script>
-</header>
+    nav .openMenu {
+        display: block;
+    }
+
+    .icons i {
+        display: inline-block;
+        padding: 12px;
+    }
+
+     a:hover {
+         font-weight: 600;
+         text-decoration: none;
+         color: red;
+      }
+
+.openMenu::after{
+  display: none;
+}
+
+}
+</style>
