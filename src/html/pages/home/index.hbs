@@ -2,8 +2,8 @@
 <html lang="en">
 
 	<head>
-		{{> ../home/header-tags.hbs }}
-		{{> ../../partials/head }}
+	  {{> pages/home/header-tags.hbs }}
+	  {{> partials/head }}
 
 		<!--<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
 		<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
@@ -33,17 +33,25 @@
 		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<!-- End Google Tag Manager (noscript) -->
 
-		{{> ../../partials/header }}
+		{{> partials/header }}
 
 		{{!-- Background and chakras  --}}
 		<div id="header-gradient"></div>
+		<div class="chakra"></div>
 		<div class="gradient-red-1"></div>
+		<div class="gradient-red-2"></div>
 		<div class="gradient-black-1"></div>
 
-		{{> ./arth-header.hbs }}
-		{{> ./arth-detail.hbs }}
-		{{> ../home/partners.hbs }}
-		{{> ../../partials/footer }}
+		{{> pages/home/hero.hbs }}
+		{{> pages/home/home-feature.hbs }}
+		{{> pages/home/tokens.hbs }}
+		{{> pages/home/community.hbs }}
+		{{> pages/home/ecosystem.hbs }}
+		{{> pages/home/features.hbs }}
+		{{> pages/home/liquidity-mining.hbs }}
+		{{> pages/home/team.hbs }}
+		{{> pages/home/partners.hbs }}
+		{{> partials/footer }}
 
 		<script src="http://localhost:35729/livereload.js"></script>
 		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
