@@ -23,8 +23,13 @@ module.exports = {
     new CopyWebpackPlugin({ patterns: [{ from: Path.resolve(__dirname, '../src/img'), to: 'img' }] }),
     new CopyWebpackPlugin({ patterns: [{ from: Path.resolve(__dirname, '../src/images'), to: 'images' }] }),
     new HtmlWebpackPlugin({
-      template: Path.resolve(__dirname, '../src/html/index.hbs'),
-      // filename: "about.html",
+      template: Path.resolve(__dirname, '../src/html/pages/home/index.hbs'),
+      filename: "index.html",
+      // template: "!!ejs-compiled-loader!./src/index.ejs"
+    }),
+    new HtmlWebpackPlugin({
+      template: Path.resolve(__dirname, '../src/html/pages/arthcoin/index.hbs'),
+      filename: "arth.html",
       // template: "!!ejs-compiled-loader!./src/index.ejs"
     }),
   ],
