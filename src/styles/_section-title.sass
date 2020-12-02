@@ -32,12 +32,34 @@
     font-family: $font-family-heading
     line-height: 21px
     display: flex
+    max-width: 400px
+  
+  @media screen and (max-width: 600px)
+    .title-down-text
+      width: auto
 
   .line
     border: 2px solid rgba(216, 55, 71, 1)
     width: 1px
     display: flex
     margin-right: 19px
-    height: auto
+    height: 63px
     margin-top: 0
     margin-bottom: 0
+
+  .text-slide-right
+    overflow: hidden
+    width: 450px
+
+    p
+      animation: 3s text-slide-right
+      margin-bottom: 0      
+
+  @keyframes text-slide-right
+    from
+      margin-left: -100%
+      width: 100%
+
+  to
+      padding-left: 20px
+      width: 100%  
