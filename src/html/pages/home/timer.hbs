@@ -31,7 +31,7 @@ function settimer()
 	var timer_min=00;
 	if(timer_min=="")timer_min=0;
 	 
-	var timer_date=timer_year+"-"+timer_month+"-"+timer_day+" "+timer_hour+":"+timer_min+":00 UTC";
+	var timer_date=timer_year+"/"+timer_month+"/"+timer_day+" "+timer_hour+":"+timer_min+":00 UTC";
 	var end = new Date(timer_date); // Arrange values in Date Time Format
 	var now = new Date().toLocaleString(); // Get Current date time
 	var second = 1000; // Total Millisecond In One Sec
