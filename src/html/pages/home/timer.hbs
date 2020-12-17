@@ -1,6 +1,7 @@
 <section id="section-timer" data-aos="" data-aos-duration="1000" data-aos-once="true" style="display:none">
 	<div class="main-title">
-		MAHA Initial DEX Offering In		
+		MAHA Uniswap Listing In	
+		<p style="font-size: 18px">17th Dec 2020 6 PM GMT</p>	
 	</div>
 	
 	<div class="timer_row">
@@ -12,16 +13,16 @@
 	
 	<div class="button1">
 		<!--<a id="no-txt-decoration" class="button1" href="https://t.me/MahadaoAnnouncements">Notify Me</a>-->
-		<a id="no-txt-decoration" class="button1" href="https://polkastarter.com/">Visit Polkastarter</a>
+		<a id="no-txt-decoration" class="button1" href="https://uniswap.org/">Visit Uniswap</a>
 	</div>	
 </section>	
 
 <section id="section-timer-height" data-aos="" data-aos-duration="1000" data-aos-once="true" style="display:none">
 	<div class="main-title">
-		MAHA Initial DEX Offering Live		
+		MAHA Uniswap Listing Is Live
 	</div>
 	<div class="button1">
-		<a id="no-txt-decoration" class="button1" href="https://polkastarter.com/">Visit Polkastarter</a>
+		<a id="no-txt-decoration" class="button1" href="https://uniswap.org/">Visit Uniswap</a>
 	</div>	
 </section>		
 	
@@ -35,9 +36,9 @@ function settimer()
 	var timer_month=12;
 	var timer_day=17;
 	var timer_year=currentTime.getFullYear();
-	var timer_hour=15;
+	var timer_hour=18;
 	if(timer_hour=="")timer_hour=0;
-	var timer_min=00;
+	var timer_min=30;
 	if(timer_min=="")timer_min=0;
 	 
 	var timer_date=timer_year+"/"+timer_month+"/"+timer_day+" "+timer_hour+":"+timer_min+":00 UTC";
@@ -64,7 +65,9 @@ function settimer()
 			document.getElementById("timerSeconds").innerHTML = seconds;
 		}
 		else
-		{   document.getElementById("section-timer-height").setAttribute("class", "showclass");
+		{   
+			document.getElementById("section-timer").setAttribute("class", "hideclass");
+			document.getElementById("section-timer-height").setAttribute("class", "showclass");
 			clearInterval(timer);
 			document.getElementById("timerDays").innerHTML = 0;
 			document.getElementById("timerHours").innerHTML = 0;
