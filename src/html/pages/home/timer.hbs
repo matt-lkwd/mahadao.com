@@ -1,4 +1,4 @@
-<section id="section-timer" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+<section id="section-timer" data-aos="" data-aos-duration="1000" data-aos-once="true" style="display:none">
 	<div class="main-title">
 		MAHA Initial DEX Offering In		
 	</div>
@@ -11,10 +11,19 @@
 	</div>
 	
 	<div class="button1">
-		<a id="no-txt-decoration" class="button1" href="https://t.me/MahadaoAnnouncements">Notify Me</a>
+		<!--<a id="no-txt-decoration" class="button1" href="https://t.me/MahadaoAnnouncements">Notify Me</a>-->
+		<a id="no-txt-decoration" class="button1" href="https://polkastarter.com/">Visit Polkastarter</a>
 	</div>	
 </section>	
-	
+
+<section id="section-timer-height" data-aos="" data-aos-duration="1000" data-aos-once="true" style="display:none">
+	<div class="main-title">
+		MAHA Initial DEX Offering Live		
+	</div>
+	<div class="button1">
+		<a id="no-txt-decoration" class="button1" href="https://polkastarter.com/">Visit Polkastarter</a>
+	</div>	
+</section>		
 	
 
 <script type="text/javascript">
@@ -42,8 +51,20 @@ function settimer()
 	function showtimer() {
 		var now = new Date();
 		var remain = end - Date.parse(now); // Get The Difference Between Current and entered date time
-		if(remain < 0)
+		if(remain > 0)
 		{
+			document.getElementById("section-timer").setAttribute("class", "showclass");
+			var days = Math.floor(remain / day); // Get Remaining Days
+			var hours = Math.floor((remain % day) / hour); // Get Remaining Hours
+			var minutes = Math.floor((remain % hour) / minute); // Get Remaining Min
+			var seconds = Math.floor((remain % minute) / second); // Get Remaining Sec
+			document.getElementById("timerDays").innerHTML = days;
+			document.getElementById("timerHours").innerHTML = hours;
+			document.getElementById("timerMinutes").innerHTML = minutes;
+			document.getElementById("timerSeconds").innerHTML = seconds;
+		}
+		else
+		{   document.getElementById("section-timer-height").setAttribute("class", "showclass");
 			clearInterval(timer);
 			document.getElementById("timerDays").innerHTML = 0;
 			document.getElementById("timerHours").innerHTML = 0;
@@ -51,14 +72,7 @@ function settimer()
 			document.getElementById("timerSeconds").innerHTML = 0;
 			return;
 		}
-		var days = Math.floor(remain / day); // Get Remaining Days
-		var hours = Math.floor((remain % day) / hour); // Get Remaining Hours
-		var minutes = Math.floor((remain % hour) / minute); // Get Remaining Min
-		var seconds = Math.floor((remain % minute) / second); // Get Remaining Sec
-		document.getElementById("timerDays").innerHTML = days;
-		document.getElementById("timerHours").innerHTML = hours;
-		document.getElementById("timerMinutes").innerHTML = minutes;
-		document.getElementById("timerSeconds").innerHTML = seconds;
+
 	}
 	timer = setInterval(showtimer, 1000); // Display Timer In Every 1 Sec
 }
